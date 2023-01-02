@@ -19,10 +19,16 @@ class register():
     def gen_machineCode(self):
         machine_code = uuid.getnode()
         machine_code_hash = hashlib.sha256(str(machine_code).encode('utf-8')).hexdigest()
-        return machine_code
+        return machine_code_hash
     def checkregister(self):
         machineCode = self.gen_machineCode()
-        
+        httpregister = requests.get("https://raw.githubusercontent.com/130347665/Eccs-Search-Pyqt6/master/reistercode.txt").text.split("\n")
+        print(machineCode)
+        print(httpregister)
+        try:
+            httpregister.index(machineCode)
+        except ValueError as e:
+            print("未註冊")
         
     
 
