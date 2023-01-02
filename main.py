@@ -27,13 +27,14 @@ class register():
         print(httpregister)
         try:
             httpregister.index(machineCode)
+            return True
         except ValueError as e:
-            print("未註冊")
+            return False
+            
         
     
 
- 
-checked = register().checkregister()
+
 #Load ini
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -143,8 +144,12 @@ class MyWindow(QtWidgets.QMainWindow,Ui_MainWindow):
         self.setupUi(self)                      #这个是我们生成的py里面的一个函数。就是用于绘制界面的。
         self.pushButton.clicked.connect(self.search)
         self.initConfig()
-
-
+        #驗證機器瑪
+        checked = register().checkregister()
+        if checked == False:
+            QMessageBox.information(None,"未驗證的機器","請先連絡註冊")
+        elif checked == True:
+            print("註冊成功")
         #全選
         select_all_action = QAction("全選", self)
         select_all_action.setShortcut("Ctrl+A")
