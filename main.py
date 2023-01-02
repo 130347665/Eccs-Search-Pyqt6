@@ -147,9 +147,13 @@ class MyWindow(QtWidgets.QMainWindow,Ui_MainWindow):
         #驗證機器瑪
         checked = register().checkregister()
         if checked == False:
-            QMessageBox.information(None,"未驗證的機器","請先連絡註冊")
+            QMessageBox.information(None,"未驗證的機器","請先連絡註冊\n以複製到剪貼版\n請將機器碼回傳")
+            clipboard = QApplication.clipboard()
+            machineCode = register().gen_machineCode()
+            clipboard.setText(machineCode)
+            sys.exit()
         elif checked == True:
-            print("註冊成功")
+            print("可使用")
         #全選
         select_all_action = QAction("全選", self)
         select_all_action.setShortcut("Ctrl+A")
