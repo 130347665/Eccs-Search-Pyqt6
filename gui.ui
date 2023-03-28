@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>337</width>
+    <width>372</width>
     <height>560</height>
    </rect>
   </property>
@@ -52,26 +52,9 @@
     <item row="1" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QRadioButton" name="radioButton_2">
-        <property name="text">
-         <string>手機門號認證查詢</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="radioButton">
-        <property name="text">
-         <string>身分證認證查詢</string>
-        </property>
-       </widget>
-      </item>
-      <item>
        <widget class="QPushButton" name="pushButton">
         <property name="text">
-         <string>查詢</string>
+         <string>預先委任查詢</string>
         </property>
        </widget>
       </item>
@@ -88,7 +71,7 @@
          </size>
         </property>
         <property name="placeholderText">
-         <string>待查尋手機號/身分證 貼在這~~~</string>
+         <string>待查詢小號貼這</string>
         </property>
        </widget>
       </item>
@@ -114,12 +97,12 @@
         </attribute>
         <column>
          <property name="text">
-          <string>身分證/電話</string>
+          <string>小號</string>
          </property>
         </column>
         <column>
          <property name="text">
-          <string>認證結果</string>
+          <string>結果</string>
          </property>
         </column>
        </widget>
@@ -133,7 +116,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>337</width>
+     <width>372</width>
      <height>22</height>
     </rect>
    </property>

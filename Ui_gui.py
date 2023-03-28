@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'c:\Users\benso\Desktop\Eccs-Search-Async\gui.ui'
+# Form implementation generated from reading ui file 'c:\Users\benso\Desktop\Eccs-Search-Pyqt6\gui.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.0
 #
@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(337, 560)
+        MainWindow.resize(372, 560)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
@@ -40,13 +40,6 @@ class Ui_MainWindow(object):
         self.gridLayout.addLayout(self.formLayout, 0, 0, 1, 1)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.radioButton_2 = QtWidgets.QRadioButton(self.centralwidget)
-        self.radioButton_2.setChecked(True)
-        self.radioButton_2.setObjectName("radioButton_2")
-        self.horizontalLayout.addWidget(self.radioButton_2)
-        self.radioButton = QtWidgets.QRadioButton(self.centralwidget)
-        self.radioButton.setObjectName("radioButton")
-        self.horizontalLayout.addWidget(self.radioButton)
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setObjectName("pushButton")
         self.horizontalLayout.addWidget(self.pushButton)
@@ -75,7 +68,7 @@ class Ui_MainWindow(object):
         self.gridLayout.addLayout(self.verticalLayout, 2, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 337, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 372, 22))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -91,11 +84,9 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", "公司統編"))
         self.label_2.setText(_translate("MainWindow", "使用者帳號"))
         self.label_3.setText(_translate("MainWindow", "使用者密碼"))
-        self.radioButton_2.setText(_translate("MainWindow", "手機門號認證查詢"))
-        self.radioButton.setText(_translate("MainWindow", "身分證認證查詢"))
-        self.pushButton.setText(_translate("MainWindow", "查詢"))
-        self.plainTextEdit.setPlaceholderText(_translate("MainWindow", "待查尋手機號/身分證 貼在這~~~"))
+        self.pushButton.setText(_translate("MainWindow", "預先委任查詢"))
+        self.plainTextEdit.setPlaceholderText(_translate("MainWindow", "待查詢小號貼這"))
         item = self.tableWidget.horizontalHeaderItem(0)
-        item.setText(_translate("MainWindow", "身分證/電話"))
+        item.setText(_translate("MainWindow", "小號"))
         item = self.tableWidget.horizontalHeaderItem(1)
-        item.setText(_translate("MainWindow", "認證結果"))
+        item.setText(_translate("MainWindow", "結果"))
